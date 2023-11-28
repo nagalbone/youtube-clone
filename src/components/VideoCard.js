@@ -1,11 +1,15 @@
 import React from "react";
-
-const VideoCard = () => {
+const VideoCard = ({info}) => {
+ const {snippet,statistics} = info;
+  const {channelTitle,title,thumbnails} = snippet;
   return (
-    <div className="card py-4 my-2 mx-2">
-      <div className="bg-gray-300 w-64 h-44 rounded-lg"></div>
-      <h1>New song</h1>
-      <h2>13 k View . 19 min ago</h2>
+    <div className="p-2 my-2 mx-2 w-80 shadow-lg cursor-pointer hover:bg-gray-100">
+      <img src={thumbnails.medium.url} alt="thumbnails" className="rounded-lg w-82"/>
+      <ul>
+        <li className="py-2 font-bold">{title}</li>
+        <li>{channelTitle}</li>
+        <li>{statistics.viewCount} Views</li>
+      </ul>
     </div>
   );
 };
