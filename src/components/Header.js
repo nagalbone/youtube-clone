@@ -57,11 +57,18 @@ const Header = () => {
       </div>
       <div className="col-span-9 sm:grid-cols-9 lg:grid-cols-9 flex">
         <div className="w-full">
+          <form onSubmit={(e)=>{
+            e.preventDefault();
+            setShowSugg(false)
+          }}>
           <input
             type="text"
             placeholder="Search"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => {
+              setSearchQuery(e.target.value)
+              setShowSugg(true);
+            }}
             onFocus={() => setShowSugg(true)}
             onBlur={() => setShowSugg(false)}
             className="border border-gray-800 w-full sm:w-1/2 lg:w-1/8 rounded-l-full p-1 px-2"
@@ -72,13 +79,13 @@ const Header = () => {
           >
             Search
           </button>
+          </form> 
           {showSugg && (
             <div className="absolute bg-gray-50 p-2 mx-2 rounded-lg shadow-lg w-[41rem]">
               <ul>
                 {segessions.map((sugg) => (
                   <li
                     className="my-1 hover:bg-gray-100"
-                    onClick={getSearchVideos}
                   >
                     {sugg}
                   </li>
