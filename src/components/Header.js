@@ -35,6 +35,7 @@ const Header = () => {
   };
 
   const getSearchVideos = async () => {
+    dispatch(addVideos([]));
     const data = await fetch(YOUTUBE_QUERY_SEARCH_API + searchQuery);
     const json = await data.json();
     dispatch(addVideos(json.items));

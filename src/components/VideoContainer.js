@@ -4,6 +4,7 @@ import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addVideos } from "../utils/videosSlice";
+import VideoShimmer from "./VideoShimmer";
 const VideoContainer = () => {
   // const [videos, setVideos] = useState([]);
   const dispatch = useDispatch();
@@ -18,6 +19,8 @@ const VideoContainer = () => {
     const result = await data.json();
     dispatch(addVideos(result.items));
   };
+
+  if(videos.length === 0 ) return (<div className="flex flex-wrap"><VideoShimmer /></div>);
 
   return (
     <div className="flex flex-wrap">

@@ -9,35 +9,35 @@ const SideBar = () => {
   return (
     <div className="w-48 shadow-lg p-5">
       <ul>
-        <li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg bg-gray-200 rounded-lg">
           <Link to="/">Home</Link>
         </li>
-        <li>Shorts</li>
-        <li>Subscription</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Shorts</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Subscription</li>
       </ul>
       <hr className="mt-4" />
-      <h1 className="font-bold mt-4">Subscription</h1>
+      <h1 className="mt-4 text-lg font-medium">Subscription</h1>
       <ul>
-        <li>Aaj Tak</li>
-        <li>Songs </li>
-        <li>New Songs</li>
-        <li>Old Songs</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Aaj Tak</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Songs </li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">New Songs</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Old Songs</li>
       </ul>
       <hr className="mt-4" />
-      <h1 className="font-bold mt-4">Explore</h1>
+      <h1 className="mt-4 text-lg font-medium">Explore</h1>
       <ul>
-        <li>Trending</li>
-        <li>Shopping</li>
-        <li>New</li>
-        <li>Latest</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Trending</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Shopping</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">New</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Latest</li>
       </ul>
       <hr className="mt-4" />
-      <h1 className="font-bold mt-4">More</h1>
+      <h1 className="mt-4 text-lg font-medium">More</h1>
       <ul>
-        <li>Your Subscription</li>
-        <li>Studio</li>
-        <li>Music</li>
-        <li>Youtube Kids</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Your Subscription</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Studio</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Music</li>
+        <li className="hover:bg-gray-200 p-2 hover:rounded-lg">Youtube Kids</li>
       </ul>
     </div>
   );
