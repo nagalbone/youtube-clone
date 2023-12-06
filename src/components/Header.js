@@ -65,6 +65,7 @@ const Header = () => {
           <input
             type="text"
             placeholder="Search"
+            required
             value={searchQuery}
             onChange={(e) => {
               setSearchQuery(e.target.value)

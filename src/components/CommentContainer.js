@@ -40,7 +40,6 @@ const CommentContainer = () => {
 const CommentList = ({commentsList})=>{
   return (
 <>
-
     {
       commentsList.map((comment)=>{
         return(

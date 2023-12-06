@@ -22,7 +22,6 @@ const LiveChat = () => {
       {
         messages.map((msg)=> <Messages name={msg.name} message={msg.message}/>)
       }
-    
     </div>
     </>
   )
@@ -40,7 +39,6 @@ const Messages = ({name,message})=>{
         <span className='m-2'> {message}</span>
         </div>
     )
-
 }
 
 export default LiveChat;
